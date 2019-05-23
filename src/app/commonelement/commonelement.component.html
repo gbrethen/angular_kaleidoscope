@@ -1,0 +1,23 @@
+
+  <div style="margin: 10px; padding: 5px;">
+    <div class="jumbotron bg-light border border-secondary">
+      <h3 class="display-4">Common Elements</h3>
+      <p class="lead">This is a simle demonstration that utilizes Typescript arrays.</p>
+    </div>
+    <div class="form-group" style="width: 45%;">
+      <label for="array1">Input first array of integers</label>
+      <input type="text" class="form-control" [(ngModel)]="array1" pattern="^([0-9]+,?)+$" #arrayone="ngModel" autofocus />
+      <div *ngIf="arrayone.errors?.pattern" style="color: red; margin-top: 4px;"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Input is incorrect.</div>
+    </div>
+    <div class="form-group" style="width: 45%;">
+      <label for="array2">Input second array of integers</label>
+      <input type="text" class="form-control" [(ngModel)]="array2" pattern="^([0-9]+,?)+$" #arraytwo="ngModel"/>
+      <div *ngIf="arraytwo.errors?.pattern" style="color: red; margin-top: 4px;"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Input is incorrect.</div>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="DisplayCommonElelments()">Evaluate</button>
+    &nbsp;&nbsp;
+    <button type="button" class="btn btn-danger " (click)="ClearArrays()"><i class="fas fa-redo" aria-hidden="true"></i> Clear</button>
+    <hr/>
+    <label for="txtResults">Common Elements</label>
+    <textarea class="form-control" id="txtResults" rows="4" [(ngModel)]="results"></textarea>
+  </div>
