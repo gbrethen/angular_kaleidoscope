@@ -27,7 +27,7 @@ export class CommonelementComponent implements OnInit {
     console.log("inside function...");
     this.array1 = this.SquashArray(this.array1);
     this.array2 = this.SquashArray(this.array2);
-    this.results = this.array1.filter(o => this.array2.some((item) => o === item));
+    this.results = this.array1.filter(o => this.array2.some((item) => o === item)).sort();
     
     this.ResetArrays();
   }
