@@ -5,12 +5,16 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppBlocksComponent } from './app-blocks/app-blocks.component';
 import { CommonelementComponent } from './commonelement/commonelement.component';
+import { CheckerboardComponent } from './checkerboard/checkerboard.component';
+import { SanitizeHtmlPipe } from './sanitize-html.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppBlocksComponent,
-    CommonelementComponent
+    CommonelementComponent,
+    CheckerboardComponent,
+    SanitizeHtmlPipe
   ],
   imports: [
     BrowserModule,

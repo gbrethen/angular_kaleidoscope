@@ -10,9 +10,15 @@ export class AppBlocksComponent implements OnInit {
 
   constructor(private componentDisplay: ComponentDisplayService) { }
 
-  @HostListener('click')
-  click() {
-    this.componentDisplay.toggle();
+  @HostListener('CheckerBoard')
+  @HostListener('CommonElement')
+
+  CheckerBoard() {
+    this.componentDisplay.toggle('CB');
+  }
+
+  CommonElement() {
+    this.componentDisplay.toggle('CE');
   }
 
   ngOnInit() {

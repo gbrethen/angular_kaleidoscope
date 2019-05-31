@@ -18,13 +18,12 @@ export class CommonelementComponent implements OnInit {
   constructor(private componentDisplay: ComponentDisplayService) { }
 
   ngOnInit() {
-    this.componentDisplay.change.subscribe(showCE => {
+    this.componentDisplay.changeCE.subscribe(showCE => {
       this.showCE = showCE;
     })      
   }
 
   DisplayCommonElelments(): void {
-    console.log("inside function...");
     this.array1 = this.SquashArray(this.array1);
     this.array2 = this.SquashArray(this.array2);
     this.results = this.array1.filter(o => this.array2.some((item) => o === item)).sort();

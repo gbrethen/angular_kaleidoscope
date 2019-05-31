@@ -1,0 +1,22 @@
+:host {
+    display: none;
+}
+
+:host.showCB {
+    display: block;
+}
+
+#Checkerboard {
+    width: 100%;
+    margin-top: -50px;
+}
+
+.parent.perspective {
+    perspective: 50em;
+}
+
+.parent.perspective .child {
+    transform: rotateX(50deg)
+}
+
+
