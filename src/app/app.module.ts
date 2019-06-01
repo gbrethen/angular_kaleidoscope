@@ -7,6 +7,7 @@ import { AppBlocksComponent } from './app-blocks/app-blocks.component';
 import { CommonelementComponent } from './commonelement/commonelement.component';
 import { CheckerboardComponent } from './checkerboard/checkerboard.component';
 import { SanitizeHtmlPipe } from './sanitize-html.pipe';
+import { StringreverseComponent } from './stringreverse/stringreverse.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SanitizeHtmlPipe } from './sanitize-html.pipe';
     AppBlocksComponent,
     CommonelementComponent,
     CheckerboardComponent,
-    SanitizeHtmlPipe
+    SanitizeHtmlPipe,
+    StringreverseComponent
   ],
   imports: [
     BrowserModule,

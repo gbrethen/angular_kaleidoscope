@@ -12,6 +12,7 @@ export class AppBlocksComponent implements OnInit {
 
   @HostListener('CheckerBoard')
   @HostListener('CommonElement')
+  @HostListener('StringReverse')
 
   CheckerBoard() {
     this.componentDisplay.toggle('CB');
@@ -19,6 +20,10 @@ export class AppBlocksComponent implements OnInit {
 
   CommonElement() {
     this.componentDisplay.toggle('CE');
+  }
+
+  StringReverse() {
+    this.componentDisplay.toggle('SR');
   }
 
   ngOnInit() {
