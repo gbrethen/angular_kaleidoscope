@@ -5,3 +5,12 @@
 :host.showCE {
     display: block;
 }
+
+#ceMain {
+    margin: 10px;
+    padding: 5px;
+}
+
+.form-width {
+    width: 45%;
+}
