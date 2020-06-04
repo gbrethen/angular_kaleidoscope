@@ -4,21 +4,23 @@
       <h3 class="display-4">Common Elements</h3>
       <p class="lead">This is a simple demonstration that utilizes Typescript arrays.  The objective is to compare array 1 with array 2 and determine the common elements in both arrays.  This example uses integers.</p>
     </div>
-    <div class="form-group form-width" style="width: 45%;">
-      <label for="array1">Input first array of integers. ex: (1,2,3,4,5)</label>
-      <input type="text" class="form-control" [(ngModel)]="array1" pattern="^([0-9]+,?)+$" #arrayone="ngModel" autofocus />
-      <div *ngIf="arrayone.errors?.pattern" style="color: red; margin-top: 4px;"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Input is incorrect.</div>
-    </div>
-    <div class="form-group form-width" style="width: 45%;">
-      <label for="array2">Input second array of integers. ex: (3,5,6,8,9)</label>
-      <input type="text" class="form-control" [(ngModel)]="array2" pattern="^([0-9]+,?)+$" #arraytwo="ngModel"/>
-      <div *ngIf="arraytwo.errors?.pattern" style="color: red; margin-top: 4px;"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Input is incorrect.</div>
-    </div>
-    <button type="button" class="btn btn-primary" (click)="DisplayCommonElelments()">Evaluate</button>
-    &nbsp;&nbsp;
-    <button type="button" class="btn btn-danger " (click)="ClearArrays()"><i class="fas fa-redo" aria-hidden="true"></i> Clear</button>
-    <hr/>
-    <label for="txtResults">Common Elements</label>
-    <textarea class="form-control" id="txtResults" rows="4" [(ngModel)]="results"></textarea>
+    <form>
+      <div class="form-group form-width" style="width: 45%;">
+        <label for="array1">Input first array of integers. ex: (1,2,3,4,5)</label>
+        <input type="text" class="form-control" [(ngModel)]="array1" pattern="^([0-9]+,?)+$" #arrayone="ngModel" autofocus />
+        <div *ngIf="arrayone.errors?.pattern" style="color: red; margin-top: 4px;"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Input is incorrect.</div>
+      </div>
+      <div class="form-group form-width" style="width: 45%;">
+        <label for="array2">Input second array of integers. ex: (3,5,6,8,9)</label>
+        <input type="text" class="form-control" [(ngModel)]="array2" pattern="^([0-9]+,?)+$" #arraytwo="ngModel"/>
+        <div *ngIf="arraytwo.errors?.pattern" style="color: red; margin-top: 4px;"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Input is incorrect.</div>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="DisplayCommonElelments()">Evaluate</button>
+      &nbsp;&nbsp;
+      <button type="button" class="btn btn-danger " (click)="ClearArrays()"><i class="fas fa-redo" aria-hidden="true"></i> Clear</button>
+      <hr/>
+      <label for="txtResults">Common Elements</label>
+      <textarea class="form-control" id="txtResults" rows="4" [(ngModel)]="results"></textarea>
+    </form>
   </div>
 </div>
